@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FuturShop - Mode Futuriste</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body class="theme-dark">
+    <header>
+        <div class="logo">
+            <span class="logo-text">FUTUR<span class="logo-accent">SHOP</span></span>
+        </div>
+        <nav>
+            <a href="#accueil">Accueil</a>
+            <a href="#produits">Produits</a>
+            <a href="#nouveautes">Nouveautés</a>
+            <a href="#contact">Contact</a>
+        </nav>
+        <div class="theme-switcher-container">
+            <button id="theme-switcher" aria-label="Changer de thème">
+                <span class="icon-dark">🌙</span>
+                <span class="icon-light">☀️</span>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <!-- Section Carrousel -->
+        <section id="accueil" class="carousel-section">
+            <div class="carousel-container">
+                <div class="carousel-slide" style="background-image: url('assets/carou-1.jpg');">
+                    <div class="slide-content">
+                        <h1>La Mode de Demain, Aujourd'hui.</h1>
+                        <p>Plongez dans l'esthétique Techwear et Cyberpunk.</p>
+                        <a href="#produits" class="cta-button">Découvrir la collection</a>
+                    </div>
+                </div>
+                <div class="carousel-slide" style="background-image: url('assets/carou-2.jpg');">
+                    <div class="slide-content">
+                        <h1>Design Fonctionnel et Avant-Gardiste.</h1>
+                        <p>Des matériaux innovants pour une performance urbaine.</p>
+                        <a href="#produits" class="cta-button">Voir les nouveautés</a>
+                    </div>
+                </div>
+                <div class="carousel-slide" style="background-image: url('assets/carou-3.jpg');">
+                    <div class="slide-content">
+                        <h1>Édition Limitée "Néo-Tokyo".</h1>
+                        <p>Des pièces uniques inspirées des mégalopoles futuristes.</p>
+                        <a href="#produits" class="cta-button">Acheter maintenant</a>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-nav prev" aria-label="Précédent">‹</button>
+            <button class="carousel-nav next" aria-label="Suivant">›</button>
+            <div class="carousel-dots"></div>
+        </section>
+
+        <!-- Section Produits (Cartes Glassmorphism) -->
+        <section id="produits" class="products-section">
+            <h2>Nos Pièces Phares</h2>
+            <div class="product-grid">
+                <!-- Carte Produit 1 -->
+                <div class="product-card glassmorphism">
+                    <img src="assets/prod-1.jpg" alt="Veste Techwear Urbaine">
+                    <div class="card-content">
+                        <h3>Veste Urbaine 'Ghost'</h3>
+                        <p>Protection et style futuriste. Multi-poches et imperméable.</p>
+                        <span class="price">299,99 €</span>
+                        <button class="add-to-cart">Ajouter au panier</button>
+                    </div>
+                </div>
+
+                <!-- Carte Produit 2 -->
+                <div class="product-card glassmorphism">
+                    <img src="assets/prod-2.jpg" alt="Pantalon Cargo Fonctionnel">
+                    <div class="card-content">
+                        <h3>Pantalon Cargo 'Nexus'</h3>
+                        <p>Confort et modularité. Tissu respirant haute technologie.</p>
+                        <span class="price">149,99 €</span>
+                        <button class="add-to-cart">Ajouter au panier</button>
+                    </div>
+                </div>
+
+                <!-- Carte Produit 3 -->
+                <div class="product-card glassmorphism">
+                    <img src="assets/prod-3.jpg" alt="Hoodie Cyberpunk">
+                    <div class="card-content">
+                        <h3>Hoodie 'Circuit'</h3>
+                        <p>Design asymétrique avec éclairage LED discret (optionnel).</p>
+                        <span class="price">119,99 €</span>
+                        <button class="add-to-cart">Ajouter au panier</button>
+                    </div>
+                </div>
+
+                <!-- Carte Produit 4 -->
+                <div class="product-card glassmorphism">
+                    <img src="assets/prod-4.jpg" alt="Sac à dos modulaire">
+                    <div class="card-content">
+                        <h3>Sac à Dos 'Module'</h3>
+                        <p>Système de fixation modulaire pour tous vos gadgets.</p>
+                        <span class="price">189,99 €</span>
+                        <button class="add-to-cart">Ajouter au panier</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 FuturShop. Tous droits réservés. | Conçu par Manus/Vercel v0</p>
+    </footer>
+</body>
+</html>
