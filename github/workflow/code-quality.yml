@@ -1,0 +1,45 @@
+name: Vérification qualité du code
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+
+jobs:
+  code_quality_check:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: 📥 Cloner le dépôt
+        uses: actions/checkout@v4
+
+      - name: 🧰 Installer Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: 📦 Installer les dépendances
+        run: npm install
+
+      - name: 🧹 Lancer l’analyse ESLint
+        run: npm run lint
+
+      - name: 📧 Envoyer un e-mail si échec
+        if: failure()
+        uses: dawidd6/action-send-mail@v3
+        with:
+          server_address: smtp.gmail.com
+          server_port: 465
+          username: ${{ secrets.EMAIL_USER }}
+          password: ${{ secrets.EMAIL_PASS }}
+          subject: "🚨 Échec de la vérification de qualité du code"
+          to: ${{ github.actor }}@users.noreply.github.com
+          from: "bot@tonprojet.com"
+          body: |
+            Bonjour ${{ github.actor }},
+
+            Le commit `${{ github.sha }}` a échoué à l’analyse de qualité du code.
+            Merci de corriger les erreurs avant de refaire un push.
+
+            ✅ Détails : ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
