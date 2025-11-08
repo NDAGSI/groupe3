@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Mini TODO - Exemple JavaScript</title>
+  <!-- Lien vers le fichier CSS -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="app" role="main" aria-labelledby="title">
+    <header>
+      <h1 id="title">Mini TODO — JavaScript</h1>
+      <div class="controls">
+        <div class="filters" role="tablist" aria-label="Filtres">
+          <button data-filter="all" class="active">Tous</button>
+          <button data-filter="active">Actifs</button>
+          <button data-filter="completed">Terminés</button>
+        </div>
+      </div>
+    </header>
+
+    <section class="input" aria-label="Ajouter une tâche">
+      <input id="newTask" type="text" placeholder="Ajouter une tâche et appuyer sur Entrée..." />
+      <button id="addBtn">Ajouter</button>
+    </section>
+
+    <section class="list" id="todoList" aria-live="polite"></section>
+
+    <footer>
+      <span id="count">0 tâches</span>
+      <div>
+        <button id="clearCompleted" class="icon-btn">Effacer terminés</button>
+        <button id="resetAll" class="icon-btn danger">Réinitialiser</button>
+      </div>
+    </footer>
+  </main>
+
+  <!-- Lien vers le fichier JavaScript -->
+  <script src="script.js"></script>
+</body>
+</html>
